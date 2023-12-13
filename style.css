@@ -1,8 +1,21 @@
+:root {
+    --background: #222222;
+    --plates: #333333;
+    --elements: hsl(0, 0%, 27%); 
+    --highlights: #555555;
+    --border: 1px solid #555555;
+    --text: #ffffff;
+    --elements_negative: rgb(60, 30, 30); 
+    --highlights_negative: rgb(90, 60, 60);
+    --border_negative: 1px solid rgb(90, 60, 60); 
+}
+
 html {
-    background-color: #222222;
+    background-color: var(--background);
     font-family: 'Courier New', Courier, monospace;
-    color: ffffff;
+    color: var(--text);
     padding: 20px;
+    font-size: medium;
 }
 
 div {
@@ -10,15 +23,19 @@ div {
 }
 
 button {
-    border: 1px solid #555555;
-    background-color: #444444;
-    color: white;
+    border: var(--border);
+    background-color: var(--elements);
+    color: var(--text);
+}
+
+button:hover {
+    background-color: var(--highlights);
 }
 
 input {
-    border: 1px solid #555555;
-    background-color: #444444;
-    color: white;
+    border: var(--border);
+    background-color: var(--elements);
+    color: var(--text);
 }
 
 #main {
@@ -30,11 +47,11 @@ input {
 
 #top_bar {
     display: grid;
-    grid-template-columns: 40% 20% 20%;
+    grid-template-columns: 40% 20px 20% 20%;
     grid-template-rows: 100%;
     gap: 20px;
-    background-color: #333333;
-    border: 1px solid #555555;
+    background-color: var(--plates);
+    border: var(--border);
 }
 
 #boxes {
@@ -45,11 +62,30 @@ input {
 }
 
 #do {
-    background-color: #333333;
-    border: 1px solid #555555;
+    background-color: var(--plates);
+    border: var(--border);
 }
 
 #done {
-    background-color: #333333;
-    border: 1px solid #555555;
+    background-color: var(--plates);
+    border: var(--border);
+}
+
+#clear_box {
+    margin-left: -20px;
+    border: var(--border_negative);
+    background-color: var(--elements_negative);
+}
+
+#clear_box:hover {
+    background-color: var(--highlights_negative);
+}
+
+#clear_task {
+    border: var(--border_negative);
+    background-color: var(--elements_negative);
+}
+
+#clear_task:hover {
+    background-color: var(--highlights_negative);
 }
