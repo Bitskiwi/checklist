@@ -1,26 +1,55 @@
 html {
     background-color: #222222;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: ffffff;
-}
-
-body {
-    display: grid;
-    grid-template-rows: 100px 100px;
-    grid-template-columns: auto;
-    gap: 20px;
-    width: 90%;
-    height: 90%;
+    padding: 20px;
 }
 
 div {
+    padding: 20px;
+}
+
+button {
+    border: 1px solid #555555;
+    background-color: #444444;
+    color: white;
+}
+
+input {
+    border: 1px solid #555555;
+    background-color: #444444;
+    color: white;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80%;
+    gap: 20px;
+}
+
+#top_bar {
+    display: grid;
+    grid-template-columns: 40% 20% 20%;
+    grid-template-rows: 100%;
+    gap: 20px;
     background-color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    border: 1px solid #555555;
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80vh;
+    gap: 20px;
+}
+
+#do {
+    background-color: #333333;
+    border: 1px solid #555555;
+}
+
+#done {
+    background-color: #333333;
+    border: 1px solid #555555;
 }
