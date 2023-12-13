@@ -15,7 +15,12 @@ html {
     font-family: 'Courier New', Courier, monospace;
     color: var(--text);
     padding: 20px;
-    font-size: medium;
+    overflow: hidden;
+}
+
+* {
+    border-radius: 5px;
+    font-size: small;
 }
 
 div {
@@ -30,12 +35,37 @@ button {
 
 button:hover {
     background-color: var(--highlights);
+    cursor: pointer;
 }
 
 input {
     border: var(--border);
     background-color: var(--elements);
     color: var(--text);
+}
+
+.element {
+    border: var(--border);
+    background-color: var(--elements);
+    color: var(--text);
+}
+
+.element:hover {
+    background-color: var(--highlights);
+}
+
+.element_negative {
+    border: var(--border_negative);
+    background-color: var(--elements_negative);
+}
+
+.element_negative:hover {
+    background-color: var(--highlights_negative);
+}
+
+.plate {
+    background-color: var(--plates);
+    border: var(--border);
 }
 
 #main {
@@ -50,8 +80,6 @@ input {
     grid-template-columns: 40% 20px 20% 20%;
     grid-template-rows: 100%;
     gap: 20px;
-    background-color: var(--plates);
-    border: var(--border);
 }
 
 #boxes {
@@ -61,31 +89,31 @@ input {
     gap: 20px;
 }
 
-#do {
-    background-color: var(--plates);
-    border: var(--border);
-}
-
-#done {
-    background-color: var(--plates);
-    border: var(--border);
-}
-
 #clear_box {
     margin-left: -20px;
-    border: var(--border_negative);
-    background-color: var(--elements_negative);
 }
 
-#clear_box:hover {
-    background-color: var(--highlights_negative);
+#do {
+    overflow: scroll;
 }
 
-#clear_task {
-    border: var(--border_negative);
-    background-color: var(--elements_negative);
+.task {
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 70% 20px;
+    grid-template-rows: 100%;
+    gap: 20px;
 }
 
-#clear_task:hover {
-    background-color: var(--highlights_negative);
+#del {
+    margin-left: -20px;
+}
+
+.stay {
+    margin-top: -20px;
+    margin-left: -20px;
+    padding: 10px;
+    position: fixed;
+    background-color: var(--plates);
 }
