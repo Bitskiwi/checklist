@@ -1,0 +1,119 @@
+:root {
+    --background: #222222;
+    --plates: #333333;
+    --elements: hsl(0, 0%, 27%); 
+    --highlights: #555555;
+    --border: 1px solid #555555;
+    --text: #ffffff;
+    --elements_negative: rgb(60, 30, 30); 
+    --highlights_negative: rgb(90, 60, 60);
+    --border_negative: 1px solid rgb(90, 60, 60); 
+}
+
+html {
+    background-color: var(--background);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text);
+    padding: 20px;
+    overflow: hidden;
+}
+
+* {
+    border-radius: 5px;
+    font-size: small;
+}
+
+div {
+    padding: 20px;
+}
+
+button {
+    border: var(--border);
+    background-color: var(--elements);
+    color: var(--text);
+}
+
+button:hover {
+    background-color: var(--highlights);
+    cursor: pointer;
+}
+
+input {
+    border: var(--border);
+    background-color: var(--elements);
+    color: var(--text);
+}
+
+.element {
+    border: var(--border);
+    background-color: var(--elements);
+    color: var(--text);
+}
+
+.element:hover {
+    background-color: var(--highlights);
+}
+
+.element_negative {
+    border: var(--border_negative);
+    background-color: var(--elements_negative);
+}
+
+.element_negative:hover {
+    background-color: var(--highlights_negative);
+}
+
+.plate {
+    background-color: var(--plates);
+    border: var(--border);
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80%;
+    gap: 20px;
+}
+
+#top_bar {
+    display: grid;
+    grid-template-columns: 40% 20px 20% 20%;
+    grid-template-rows: 100%;
+    gap: 20px;
+}
+
+#boxes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80vh;
+    gap: 20px;
+}
+
+#clear_box {
+    margin-left: -20px;
+}
+
+#do {
+    overflow: scroll;
+}
+
+.task {
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 70% 20px;
+    grid-template-rows: 100%;
+    gap: 20px;
+}
+
+#del {
+    margin-left: -20px;
+}
+
+.stay {
+    margin-top: -20px;
+    margin-left: -20px;
+    padding: 10px;
+    position: fixed;
+    background-color: var(--plates);
+}
